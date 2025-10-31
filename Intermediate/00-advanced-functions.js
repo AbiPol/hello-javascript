@@ -36,7 +36,7 @@ const handler = {
         console.log(`Hola, ${this.name}`)
     },
     arrowGreeting: () => {
-        console.log(`Hola, ${this.name}`)
+        console.log(`Hola, ${this.name}`)//Las arrow functions crean su propio contexto, por lo que el comando this no encuentra un contexto al ue referirse.
     }
 }
 
@@ -44,6 +44,9 @@ handler.greeting()
 handler.arrowGreeting();
 
 // IIFE (Expresión de Función Invocada Inmediatamente)
+//Son funciones que se ejecutan en el momento en el que se definen.Antes de ejecutar estas funciones hay que poner ; en la funcion anterior
+//para delimitar ejecuciones.
+
 
 (function () {
     console.log("IIFE clásico")
@@ -133,7 +136,7 @@ console.log(sumC(3))
 console.log(sumC(4))
 console.log(sumAB(5)(7))
 
-// Callbacks
+// Callbacks: A una funcion le pasamos otra funcion como argumento que sera personalizada su comportamiento.
 
 function processData(data, callback) {
     const result = sum(...data)

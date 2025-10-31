@@ -4,6 +4,7 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=3049
 */
 
 // var
+// PREFERIBLEMENTE NO USAR ESTA FORMA
 
 var helloWorld = "¡Hola, JavaScript!"
 console.log(helloWorld)
@@ -25,5 +26,5 @@ const helloWorld3 = "¡Hola, JavaScript 3!"
 console.log(helloWorld3)
 
 // Error
-// helloWorld3 = "¡Hola de nuevo, JavaScript 2!"
-// console.log(helloWorld3)
+ helloWorld3 = "¡Hola de nuevo, JavaScript 3!"
+ console.log(helloWorld3)

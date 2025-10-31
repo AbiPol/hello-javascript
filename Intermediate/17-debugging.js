@@ -26,4 +26,4 @@ function divide(a, b) {
     return a / b
 }
 
-// console.log(divide(5, 0)) Error
+ console.log(divide(5, 0)) //Error

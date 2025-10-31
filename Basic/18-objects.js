@@ -3,7 +3,7 @@ Clase 33 - Objetos
 Vídeo: https://youtu.be/1glVfFxj8a4?t=14229
 */
 
-// Objetos
+// Objetos: Es una coleccion de propiedades
 
 // Sintaxis
 
@@ -92,7 +92,10 @@ let person4 = {
 
 console.log(person)
 console.log(person4)
-
+/**
+ * Cuando hacemos referencia a dos objetos con los mismos valores, hay que saber que los objetos hacen referencia a direcciones de memoria y no a valores asociados.
+ * Lo tipos de datos primitivos si se guardan en memoria con un valor asociado. Los objetos se guardan haciendo referencia a direcciones de memoria.
+ */
 console.log(person == person4)
 console.log(person === person4)
 

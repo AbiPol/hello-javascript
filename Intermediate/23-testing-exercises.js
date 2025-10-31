@@ -4,7 +4,17 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=26946
 */
 
 // 1. Crea una función isEven(number) que devuelva true si el número es par y false si es impar
+function isEven(number){
+    if(number % 2 == 0){
+        return true
+    }
+    return false
+}
 
+module.exports = isEven
 // 2. Escribe una prueba en Jest para verificar que la función funciona correctamente
+/*test("Se envia numero par", () => {
+    expect(isEven(6)).toBe(true)
+})*/
 
 // 3. Verifica que la prueba se ejecuta satisfactoriamente

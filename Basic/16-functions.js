@@ -86,7 +86,7 @@ function extern() {
 extern()
 // intern() Error: fuera del scope
 
-// Funciones de orden superior
+// Funciones de orden superior: Funciones que reciben fuciones como prametros
 
 function applyFunc(func, param) {
     func(param)

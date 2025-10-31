@@ -5,9 +5,10 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=21480
 
 // Importación de módulos
 
-import { add, PI, name, Circle } from "./28-export-modules.js"
+import { add, PI, name, Circle } from "./28-export-modules.js"//No son por exportadas default y hay que hecer refrencia a cada una de las vbles./funciones
 
-import defaultImport from "./28-export-modules.js"
+import defaultImport from "./28-export-modules.js"//Al importar el archivo vienen por defecto la funcion que le indico que sea export default. 
+// En este caso no es necesario hacer referencia a ella. Se puede ver que el nombre da igual, se puede definir aqui como querramos.
 
 // Funciones
 

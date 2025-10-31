@@ -36,7 +36,9 @@ export class Circle {
 
 }
 
-// Exportación por defecto
+// Exportación por defecto: Las que se definen con default significa que la hacer el import en otro modulo
+// no hay que hacer referencia a la funcion o vble. en concreto, sino que al importar el modulo, este elemento default va por defecto.
+// Con default no se pueden exportar constantes ni vbles.
 
 export default function substract(a, b) {
     return a - b

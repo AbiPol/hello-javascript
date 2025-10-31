@@ -3,7 +3,7 @@ Clase 27 - Maps
 Vídeo: https://youtu.be/1glVfFxj8a4?t=10755
 */
 
-// Map
+// Map: Es una estructura de datos que permite almacenar pares clave-valor. No se pueden duplicar las claves.
 
 // Declaración
 
@@ -23,24 +23,24 @@ console.log(myMap)
 
 // Métodos y propiedades
 
-// set
+// set: PAra agregar o actualizar pares clave-valor en un Map
 
 myMap.set("alias", "mouredev")
 myMap.set("name", "Brais Moure")
 
 console.log(myMap)
 
-// get
+// get: se accede al elemento con clave que se le indica en el parametro.
 
 console.log(myMap.get("name"))
 console.log(myMap.get("surname"))
 
-// has
+// has: verifica si existe una clave en la estructura map
 
 console.log(myMap.has("surname"))
 console.log(myMap.has("age"))
 
-// delete
+// delete:Borrado de un par clave-valor
 
 myMap.delete("email")
 
@@ -48,9 +48,9 @@ console.log(myMap)
 
 // keys, values y entries
 
-console.log(myMap.keys())
-console.log(myMap.values())
-console.log(myMap.entries())
+console.log(myMap.keys())//Retorna un listado de las claves que tenemos en la estructura
+console.log(myMap.values())//retorna los values
+console.log(myMap.entries())//Nos devuelve todas las claves-valor de la estructura.
 
 // size
 

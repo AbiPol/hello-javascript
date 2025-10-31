@@ -3,7 +3,7 @@ Clase 26 - Sets
 Vídeo: https://youtu.be/1glVfFxj8a4?t=9952
 */
 
-// Set
+// Set: Estructura de datos que permite almacenar valores unicos. No adite duplicados, a diferencia de los arrays.
 
 // Declaración
 
@@ -11,7 +11,7 @@ let mySet = new Set()
 
 console.log(mySet)
 
-// Inicialización
+// Inicialización. Se debe de inicializar con [] dentro de los ()
 
 mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.com"])
 
@@ -34,12 +34,12 @@ console.log(mySet.delete(4))
 
 console.log(mySet)
 
-// has
+// has: Nos dice si el elemento existe o no en el set
 
 console.log(mySet.has("Moure"))
 console.log(mySet.has("Brais"))
 
-// size
+// size: Tamaño del Set
 
 console.log(mySet.size)
 

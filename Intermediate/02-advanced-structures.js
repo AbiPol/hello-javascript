@@ -7,23 +7,24 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=4355
 
 // - Métodos funcionales
 
-// forEach
+// forEach: itera el array y accedo a cada uno de los elementos del array
 
 let numbers = [1, 2, 3, 4, 5, 6]
 
 numbers.forEach(element => console.log(element))
 
-// map
+// map: Crea un nuevo array pero mapilando cada uno de los elementos con una funcion.
 
 let doubled = numbers.map(element => element * 2)
 console.log(doubled)
 
-// filter
+// filter: Realiza un filtro de los elementos del array y genera un nuevo array con los elementos que cumplen con la condicion.
 
 let evens = numbers.filter(element => element % 2 === 0)
 console.log(evens)
 
-// reduce
+// reduce: Reduce todo a un unico valor.En result se va acumulando el resultado de ir acumulando valores,es decir
+//en result va acumlando el valor current.
 
 let sum = numbers.reduce((result, current) => result + current, 0)
 console.log(sum)
@@ -32,7 +33,7 @@ console.log(sum)
 
 // flat
 
-let nestedArray = [1, [2, [3, [4]]]]
+let nestedArray = [1, [2, [3, [4]]]] //Array anidado
 console.log(nestedArray)
 let flatArray = nestedArray.flat(1)
 console.log(flatArray)
@@ -44,23 +45,33 @@ console.log(flatArray)
 // flatMap
 
 let phrases = ["Hola mundo", "Adiós mundo"]
-let words = phrases.flatMap(phrase => phrase.split(" "))
+//Esto hace lo mismo que la funcion flatmap
+let mapeo = phrases.map((elemet) => {
+    return elemet.split(" ")
+})
+console.log('Mapeo: ' + mapeo)
+let flayMapeo = mapeo.flat(1)
+console.log(flayMapeo)
+// hata aqui
+let words = phrases.flatMap(phrase => phrase.split(" "))//Split transforma una cadena en un array cuyos elementos salen de esa cadena y que son divididos por el caracter
+                                                        // que va en el parametro.
 console.log(words)
 
 // - Ordenación
 
-// sort
+// sort: Ordena con un criterio alfabetico. Con numeros no funciona asi.
 
 let unsorted = ["b", "a", "d", "c"]
 let sorted = unsorted.sort()
 console.log(sorted)
 
+//Con numeros le tenemos que indicar los numeros a comparar y la funcion al rstar los numero sabe cual es mayor y cual menor.
 unsorted = [3, 4, 1, 6, 10]
 sorted = unsorted.sort((a, b) => a - b)
 
 console.log(sorted)
 
-// reverse
+// reverse: Devuelve una referencia al array y envia los elementos ordeneados al reves que estaban en el array inicial.
 
 sorted.reverse()
 console.log(sorted)
@@ -82,14 +93,16 @@ console.log(firstEven)
 let firstEvenIndex = sorted.findIndex(element => element % 2 === 0)
 console.log(firstEvenIndex)
 
-// Sets avanzados
+
+
+// Sets avanzados: Conjuto de datos que no estan repetidos.
 
 // - Operaciones
 
-// Eliminación de duplicados
+// Eliminación de duplicados en un array.
 
 let numbersArray = [1, 2, 2, 3, 4, 5, 6, 6]
-numbersArray = [...new Set(numbersArray)]
+numbersArray = [...new Set(numbersArray)]//Propagamos lo elementos del array para meterlos en el new Set. Los duplicados no entran
 console.log(numbersArray)
 
 // Unión
@@ -99,7 +112,8 @@ const setB = new Set([2, 3, 4, 5])
 const union = new Set([...setA, ...setB])
 console.log(union)
 
-// Intersección
+// Intersección: Elementos comunes en ambos set.
+// Para convertir un set en un array [...setA]
 
 const intersection = new Set([...setA].filter(element => setB.has(element)))
 console.log(intersection)
@@ -121,6 +135,8 @@ console.log([...setA])
 
 setA.forEach(element => console.log(element))
 
+
+
 // Maps avanzados
 
 // - Iteración
@@ -137,7 +153,8 @@ myMap.forEach((value, key) => console.log(`${key}: ${value}`))
 // Map a Array
 
 const arrayFromMap = Array.from(myMap)
-console.log(arrayFromMap)
+console.log('Array sin From', arrayFromMap)
+console.log('Array From', arrayFromMap.flat())
 
 // Map a Objeto
 

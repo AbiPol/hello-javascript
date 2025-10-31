@@ -7,7 +7,7 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=7639
 
 // - Prototipos y Herencia
 
-// Prototipos
+// Prototipos: es un mecanismo por el que un objeto puede heredar propiedades y metodos de otros objetos.
 
 let person = {
     name: "Brais",
@@ -17,7 +17,7 @@ let person = {
     }
 }
 
-console.log(person.__proto__)
+console.log(person.__proto__)//Este es un enlace interno que apunta a person.prototype
 console.log(Object.getPrototypeOf(person))
 
 person.sayAge = function () {
@@ -27,12 +27,14 @@ person.sayAge = function () {
 console.log(person)
 person.sayAge()
 
+let person2 = Object.create(person)
+
 // Herencia
 
 let programmer = Object.create(person)
 programmer.language = "JavaScript"
 
-programmer.name = "MoureDev"
+programmer.name = "Leo Polanco"
 console.log(person.name)
 console.log(person.language)
 
@@ -49,16 +51,18 @@ function Person(name, age) {
     this.age = age
 }
 
+//Creamos una funcion statica, es decir que es una funcion de clase y no de instancia.
 Person.prototype.greet = function () {
     console.log(`Hola, soy ${this.name}`)
 }
 
 let newPerson = new Person("Brais", 37)
 newPerson.greet()
+programmer.greet()
 
 // - Métodos avanzados
 
-// assign
+// assign: Combina varios objetos para, al final, constuir uno solo
 
 let personCore = { name: "Brais" }
 let personDetails = { age: 37, alias: "MoureDev" }

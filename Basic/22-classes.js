@@ -94,7 +94,7 @@ let person5 = new PrivatePerson("Brais", 37, "MoureDev", "IBAN123456789")
 // console.log(person5.bank) 
 // person5.bank = "new IBAN123456789" // bank no es #bank
 
-console.log(person5)
+console.log('Person5:', person5)
 
 // Getters y Setters
 
@@ -120,14 +120,20 @@ class GetSetPerson {
         this.#bank = bank
     }
 
+    get bank(){
+        return this.#bank
+    }
+
 }
 
-person6 = new GetSetPerson("Brais", 37, "MoureDev", "IBAN123456789")
+const person6 = new GetSetPerson("Brais", 37, "MoureDev", "IBAN123456789")
 
-console.log(person6)
+console.log('Person6: ',person6)
 console.log(person6.name)
+console.log(person6.bank)
 
 person6.bank = "new IBAN123456789"
+console.log(person6.bank)
 
 /*
 Clase 38 - Herencia de clases
@@ -181,7 +187,7 @@ let myFish = new Fish("MoureFish", 10)
 myFish.swim()
 myFish.sound()
 
-// Métodos estáticos
+// Métodos estáticos: Son metodos de clase y no se usa en las instancias. No s necesario instanciar la clase para poder realizar o llamar a este metodo
 
 class MathOperations {
 

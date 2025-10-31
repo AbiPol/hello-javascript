@@ -67,7 +67,7 @@ for (let i = 0; i < 10000; i++) {
 
 console.timeEnd("Tiempo de ejecución 1")
 
-// assert
+// assert: saca el mensaje si la primera condicion no se cumple
 
 let age = 17
 console.assert(age >= 18, "El usuario debe ser mayor de edad.")
@@ -80,7 +80,7 @@ console.count("Click")
 console.countReset("Click")
 console.count("Click")
 
-// trace
+// trace: Hace seguimiento de la pila e eejcucion
 
 function funcA() {
     funcB()

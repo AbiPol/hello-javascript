@@ -2,10 +2,13 @@
 Clases 46 a 59 - APIs
 Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=14777
 */
-
+//****************************************************************************************************** */
+// Una API es un protocolo que nos permite comunicarnos entre aplicaciones. 
+// Es un contrato entre sistemas meiante el cual vamos a poder comunicarnos con un sistema externo
+//****************************************************************************************************** */
 // Manejo de APIs
 
-// - APIs REST (HTTP + URLs + JSON)
+// - APIs REST (HTTP + URLs + JSON): Se basan en el protocolo HTTP y objetos en JSON
 
 // Métodos HTTP:
 // - GET
@@ -14,11 +17,12 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=14777
 // - DELETE
 
 // Códigos de respuesta HTTP:
+// Codigo 200: La operacion ha ido bien
 // - 200 OK
-// - 201
-// - 400
-// - 404
-// - 500
+// - 201: Recurso Creado
+// - 400: Error del cliente, Algo que enviado mal.
+// - 404: No encontrado. Solicito un recurso que no encuentra el servidor
+// - 500: Erro del lado del servidor
 
 // Consumir una API
 
@@ -69,7 +73,7 @@ async function createPost() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newPost)
+            body: JSON.stringify(newPost)//Serializa el objeto JS a JSON. 
         })
 
         const data = await response.json()
@@ -90,7 +94,7 @@ createPost()
 
 fetch("https://jsonplaceholder.typicode.com/mouredev")
     .then(response => {
-        if (!response.ok) {
+        if (!response.ok) { //OK: es que esta en el rango de los 200 y la respuesta esta OK
             throw Error(`Status HTTP: ${response.status}`)
         }
         return response.json()
@@ -100,8 +104,8 @@ fetch("https://jsonplaceholder.typicode.com/mouredev")
     })
 
 // Métodos HTTP adicionales
-// - PATCH
-// - OPTIONS
+// - PATCH: Se usa para actualizar parcialmente un recurso. El PUT actualiza todo el recurso
+// - OPTIONS: Para consultar en el servidor que metodos HTTP esta habilitados para un recurso
 
 async function partialPostUpdate() {
     try {

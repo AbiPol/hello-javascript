@@ -17,7 +17,7 @@ console.log(myValue)
 let myName = person.name
 console.log(myName)
 
-// Desestructuración
+// Desestructuración: permite extraer valores de uun array u objeto de manera rapida y directa
 
 // Sintaxis arrays
 
@@ -45,8 +45,8 @@ console.log(myValue13)
 
 // Sintaxis objects
 
-let { name, age, alias } = person
-console.log(name)
+let { nombre, age, alias } = person
+console.log(nombre)
 console.log(age)
 console.log(alias)
 
@@ -88,7 +88,7 @@ let { name: name4, job: { name: jobName } } = person3
 console.log(name4)
 console.log(jobName)
 
-// Propagación (...)
+// Propagación (...) = Spread, permite propagar los elementos de un array u objeto a otro array u otro objeto
 
 // Sintaxis arrays
 
@@ -99,6 +99,8 @@ console.log(myArray2)
 // Copia de arrays
 
 let myArray3 = [...myArray]
+
+let array3 = myArray //--> Aqui estamos igualando referencias y no realizando una copia de los elementos.
 
 console.log(myArray3)
 

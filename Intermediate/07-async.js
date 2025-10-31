@@ -9,7 +9,7 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=11890
 
 console.log("Inicio")
 
-for (let i = 0; i < 100000000; i++) { }
+for (let i = 0; i < 90000000000; i++) { }
 
 console.log("Fin")
 
@@ -29,7 +29,8 @@ console.log("Fin")
 
 // Código asíncrono
 
-// - Callbacks
+// - Callbacks: Los callback son funciones que se pasan por argumento para ejecutarse despues. 
+// La callback es la que nos dice a la funcion llamante que ya termino su ejecucion y que continue. Puede enviar datos
 
 console.log("Inicio")
 
@@ -39,7 +40,7 @@ setTimeout(() => {
 
 console.log("Fin")
 
-// - Problema: Callback Hell
+// - Problema: Callback Hell: funcion que recibe una funcion como parametro. Esa funcion se ejecuta dentro de la funcion padre y se ejecuta cuando la funcin ha finalizado
 
 function step1(callback) {
     setTimeout(() => {
@@ -51,7 +52,7 @@ function step1(callback) {
 function step2(callback) {
     setTimeout(() => {
         console.log("Paso 2 completado")
-        callback()
+        callback() //Notifica que se ha acabado
     }, 1000)
 }
 
@@ -70,13 +71,14 @@ step1(() => {
     })
 })
 
-// - Promesas
+// - Promesas: Es un objeto que representa el resultado eventual (éxito o error) de una operación asíncrona.
+// Una promesa actúa como un “compromiso” de que se obtendrá un valor más adelante, cuando la operación termine.
 
 const promise = new Promise((resolve, reject) => {
     // IMPORTANTE: Inicialmente escribí setInterval, pero lo correcto es setTimeout
     // setInterval se ejecutaría indefinidamente cada 4s, y el proceso nunca finalizaría
     setTimeout(() => {
-        const ok = false
+        const ok = true
         if (ok) {
             resolve("Operación exitosa")
         } else {
@@ -91,6 +93,9 @@ promise
     })
     .catch(error => {
         console.log(error)
+    })
+    .finally(() =>{
+        console.log("se finalizo toda la operacion")
     })
 
 // - Encadenamiento de promesas

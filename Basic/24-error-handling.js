@@ -82,9 +82,9 @@ try {
     // console.log(sumIntegers(5.5, 10))
     console.log(sumIntegers("5", 10))
 } catch (error) {
-    if (error instanceof TypeError) {
+    if (error instanceof TypeError) { // Cuando el error es de tipo de datos
         console.log("Se ha producido un error de tipo:", error.message)
-    } else if (error instanceof Error) {
+    } else if (error instanceof Error) {//Error general de sistema.
         console.log("Se ha producido un error:", error.message)
     }
 }
